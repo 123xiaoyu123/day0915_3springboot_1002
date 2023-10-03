@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--xml配置文件名要和接口文件名同名-->
+<!-- mapper中 namespace:命名空间 需绑定接口全路径-->
+<mapper namespace="com.baidu.mapper.OrdersMapper">
+    <!--查询所有的订单-->
+   <!-- <select id="findOrders" resultType="Orders">
+        select * from orders
+    </select>-->
+    <!--根据ID删除-->
+    <delete id="delById" parameterType="int">
+        delete from orders where oid=#{value}
+    </delete>
+
+</mapper>

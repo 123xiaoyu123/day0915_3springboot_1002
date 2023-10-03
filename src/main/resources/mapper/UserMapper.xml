@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--xml配置文件名要和接口文件名同名-->
+<!-- mapper中 namespace:命名空间 需绑定接口全路径-->
+<mapper namespace="com.baidu.mapper.UserMapper">
+    <!--查询所有的用户-->
+    <select id="findUsers" resultType="User">
+        select * from user;
+    </select>
+
+</mapper>
