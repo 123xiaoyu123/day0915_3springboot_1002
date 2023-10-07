@@ -5,14 +5,14 @@ import com.baidu.pojo.QueryVo;
 import com.baidu.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 //控制层
 //@RestController =@Controller+@ResponseBody(使返回的是数据)
+@CrossOrigin //vue前后端分离 解决端口号不一致问题 跨域
 @RestController
 public class OrdersController {
 
@@ -42,6 +42,14 @@ public class OrdersController {
             return "redirect:showOrd";
         }
         return "error";
+    }
+    @DeleteMapping("/delete/{oid}")
+    public void delOrder(@PathVariable("oid") Integer oid){
+        try {
+            ordersService.delOrder(oid);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 

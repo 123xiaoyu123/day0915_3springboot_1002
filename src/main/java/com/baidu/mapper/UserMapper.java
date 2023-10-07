@@ -9,4 +9,7 @@ import java.util.List;
 public interface UserMapper {
     /*查询所有的用户*/
     List<User> findUsers();
+
+    //登录
+    User login(User user);
 }

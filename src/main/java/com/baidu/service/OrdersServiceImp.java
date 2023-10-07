@@ -43,4 +43,9 @@ public class OrdersServiceImp implements OrdersService{
     public int delById(Integer oid) {
         return ordersMapper.delById(oid);
     }
+
+    @Override
+    public void delOrder(Integer oid) {
+        ordersMapper.delById(oid);
+    }
 }

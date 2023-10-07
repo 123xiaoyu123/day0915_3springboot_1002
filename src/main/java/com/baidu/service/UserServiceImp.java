@@ -16,4 +16,9 @@ public class UserServiceImp implements UserService{
     public List<User> findUsers() {
         return userMapper.findUsers();
     }
+
+    @Override
+    public User login(User user) {
+        return userMapper.login(user);
+    }
 }

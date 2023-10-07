@@ -15,4 +15,7 @@ public interface OrdersService {
 
     /*根据id删除订单*/
     int delById(Integer oid);
+
+    void delOrder(Integer oid);
+
 }

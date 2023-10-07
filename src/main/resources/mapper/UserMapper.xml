@@ -10,4 +10,8 @@
         select * from user;
     </select>
 
+    <!--登录-->
+    <select id="login" resultType="User" parameterType="User">
+       select * from user where username=#{username} and password=#{password}
+    </select>
 </mapper>
